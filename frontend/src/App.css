@@ -1,0 +1,74 @@
+.App {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+  }
+  
+  .form-container {
+    margin-top: 20px;
+  }
+  
+  input {
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #aaa;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  .loading {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #007bff;
+  }
+  
+  .results {
+    margin-top: 30px;
+    text-align: left;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  h3 {
+    color: #007bff;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 20px;
+  }
+  

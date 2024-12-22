@@ -1,0 +1,201 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* App Container */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* Main Title */
+.app-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  margin-top: 40px;
+  color: #2c3e50;
+}
+
+/* Form Styles */
+.scan-form {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.domain-input {
+  padding: 14px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 350px;
+  margin-right: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.domain-input:focus {
+  border-color: #3498db;
+}
+
+.scan-button {
+  padding: 14px 28px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.scan-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.scan-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.scan-status {
+  font-size: 18px;
+  text-align: center;
+  color: #34495e;
+  margin-top: 20px;
+}
+
+/* Results Section Styles */
+.results-container {
+  margin-top: 50px;
+}
+
+.results-container h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.results-container .subdomains, .results-container .ports, .results-container .httpx-results {
+  margin-bottom: 35px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.results-container li {
+  border-bottom: 1px solid #ecf0f1;
+  padding: 12px 0;
+}
+
+.results-container li:last-child {
+  border-bottom: none;
+}
+
+.results-container li span {
+  color: #3498db;
+}
+
+.results-container .port-status {
+  font-weight: bold;
+  color: #2ecc71;
+}
+
+.results-container .subdomain-item,
+.results-container .port-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.results-container .subdomain-item span,
+.results-container .port-item span {
+  font-size: 16px;
+}
+
+/* Results Icons */
+.results-container .port-item::before {
+  content: '\f0a1'; /* FontAwesome Icon for port */
+  font-family: 'FontAwesome';
+  margin-right: 10px;
+}
+
+.results-container .subdomain-item::before {
+  content: '\f0ac'; /* FontAwesome Icon for subdomain */
+  font-family: 'FontAwesome';
+  margin-right: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 30px;
+  }
+
+  .scan-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .domain-input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .scan-button {
+    width: 100%;
+    padding: 12px 24px;
+  }
+}
+
+/* Loading spinner for button */
+.fas.fa-spinner.fa-spin {
+  margin-right: 10px;
+  font-size: 22px;
+  color: #fff;
+}
+
+/* Animation for Scan Button */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fas.fa-spinner {
+  animation: spin 2s infinite linear;
+}
